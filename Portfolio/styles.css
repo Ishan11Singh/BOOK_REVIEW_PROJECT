@@ -1,0 +1,768 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;800&family=Source+Serif+Pro:ital,wght@0,600;0,700;1,400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+    /*
+    background: crimson;*/
+    font-family: 'Roboto Slab', serif;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky {
+    padding: 15px 0;
+    background: crimson;
+}
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a {
+    color: black;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.navbar .logo a span {
+    color: #FF0000;
+}
+
+.navbar.sticky .logo a span {
+    color: whitesmoke;
+}
+
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a {
+    color: #fff;
+    font-size: 23px;
+    font-weight: 500;
+    margin-left: 30px;
+}
+
+.navbar .menu li a:hover {
+    color: #FF4500;
+}
+
+.navbar.sticky .menu li a:hover {
+    color: black;
+}
+
+
+/*menu btn styling*/
+
+.menu-btn {
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+.scroll-up-btn {
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: crimson;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.scroll-up-btn.show {
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.home {
+    display: flex;
+    background: url("coverph.jpg") no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    font-family: 'Roboto Slab', serif;
+}
+
+.home .max-width {
+    margin: auto 0 auto 40px;
+}
+
+.home .home-content .text-1 {
+    font-size: 40px;
+    font-weight: 100;
+}
+
+.home .home-content .text-2 {
+    font-size: 80px;
+    font-weight: 700;
+    margin-left: -3px;
+}
+
+.home .home-content .text-3 {
+    font-size: 40px;
+    margin: 5px 0;
+}
+
+.home .home-content .text-3 span {
+    color: #FF0000;
+    font-weight: 500;
+}
+
+
+/*courses section styling*/
+
+section {
+    padding: 90px 0;
+}
+
+.about,
+footer {
+    font-family: 'Source Serif Pro', serif;
+}
+
+.about .title {
+    position: relative;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Source Serif Pro', serif;
+}
+
+.about .title::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+
+.about .title::after {
+    content: "Who I am";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    font-size: 25px;
+    color: red;
+    padding: 5px;
+    background: white;
+    transform: translateX(-50%);
+}
+
+.about .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about .about-content .left {
+    width: 45%;
+}
+
+.about .about-content .left img {
+    height: 400px;
+    width: 350px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.about .about-content .right {
+    width: 55%;
+}
+
+.about .about-content .right .text {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    ;
+}
+
+.about .about-content .right .text span {
+    color: red;
+}
+
+.about .about-content .right p {
+    text-align: justify;
+    font-size: 20px;
+    color: #696969;
+}
+
+.about .about-content .right a {
+    display: inline-block;
+    background: red;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+
+.about .about-content .right a:hover {
+    color: crimson;
+    background: none;
+}
+
+
+/*interests section*/
+
+section {
+    padding: 80px 0;
+}
+
+.interests {
+    color: #fff;
+    background: #111;
+}
+
+.interests .title {
+    position: relative;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Source Serif Pro', serif;
+}
+
+.interests .title::before {
+    content: "";
+    background: #fff;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+.interests .title::after {
+    background: #111;
+    content: "What I love";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    font-size: 25px;
+    color: red;
+    padding: 5px;
+    transform: translateX(-50%);
+}
+
+.interests .interests-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.interests .interests-content .card {
+    width: calc(33% - 20px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 40px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.interests .interests-content .card:hover {
+    background: crimson;
+}
+
+.interests .interests-content .card .box {
+    transition: all 0.3s ease;
+}
+
+.interests .interests-content .card:hover .box {
+    transform: scale(1.05);
+}
+
+.interests .interests-content .card i {
+    font-size: 50px;
+    color: crimson;
+}
+
+.interests .interests-content .card:hover i {
+    color: #fff;
+}
+
+.interests .interests-content .card .text {
+    font-size: 30px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+.interests .interests-content .card p {
+    font-size: 20px;
+}
+
+
+/*skills stying section*/
+
+section {
+    padding: 80px;
+}
+
+.skills {
+    font-family: 'Roboto Slab', serif;
+}
+
+.skills .title {
+    position: relative;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Source Serif Pro', serif;
+}
+
+.skills .title::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+
+.skills .title::after {
+    content: "What I know";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    font-size: 25px;
+    color: red;
+    padding: 5px;
+    background: white;
+    transform: translateX(-50%);
+}
+
+.skills .skills-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills .skills-content .column {
+    width: calc(50% - 30px);
+}
+
+.skills .skills-content .left .text {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.skills .skills-content .left .text span {
+    color: red;
+}
+
+.skills .skills-content .left p {
+    font-size: 20px;
+    text-align: justify;
+}
+
+.skills .skills-content .right .bars {
+    margin-bottom: 15px;
+}
+
+.skills .skills-content .right .info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    justify-content: space-between;
+}
+
+.skills .skills-content .right span {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.skills .skills-content .right .line {
+    height: 5px;
+    width: 100%;
+    background: lightgray;
+    position: relative;
+}
+
+.skills .skills-content .right .line::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    left: 0;
+    top: 0;
+    background: crimson;
+}
+
+.skills .skills-content .right .html::before {
+    width: 65%;
+}
+
+.skills .skills-content .right .css::before {
+    width: 60%;
+}
+
+.skills .skills-content .right .js::before {
+    width: 45%;
+}
+.skills .about-content .right .excel::before{
+    width: 85%;
+}
+
+.skills .skills-content .right .java::before {
+    width: 65%;
+}
+
+
+.skills .skills-content .right .DSA::before {
+    width: 55%;
+}
+
+
+/*contact section*/
+
+section {
+    padding: 80px;
+}
+
+.contact {
+    font-family: 'Roboto Slab', serif;
+}
+
+.contact .title {
+    position: relative;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Source Serif Pro', serif;
+}
+
+.contact.title::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+
+.contact .title::after {
+    content: "Get in touch";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    font-size: 25px;
+    color: red;
+    padding: 5px;
+    background: white;
+    transform: translateX(-50%);
+}
+
+.contact .contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact .contact-content .column {
+    width: calc(50%-30px);
+}
+
+.contact .contact-content .column .left .icons {
+    margin: 10px 0;
+}
+
+.contact .contact-content .row {
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+
+.contact .contact-content .row .info {
+    margin-left: 30px;
+    ;
+}
+
+.contact .contact-content .row i {
+    font-size: 40px;
+    color: crimson;
+}
+
+.contact .contact-content .info .head {
+    font-weight: 500;
+    font-size: 28px;
+    color: #222;
+}
+
+.contact .contact-content .info .sub-title {
+    color: #555;
+    font-size: 20px;
+}
+
+.contact .contact-content .info .sub-title span {
+    color: crimson;
+}
+
+.contact .contact-content .info .sub-title span:hover {
+    color: crimson;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+footer {
+    background: white;
+    padding: 15px 23px;
+    color: #555;
+    font-size: 20px;
+    text-align: center;
+}
+
+footer span a {
+    color: crimson;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+footer span a:hover {
+    text-decoration: none;
+}
+
+footer span .social a {
+    display: inline-block;
+    width: 46px;
+    height: 46px;
+    text-align: center;
+    padding-top: 0.3cm;
+    background: crimson;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+footer span .social a .fa {
+    line-height: 46px;
+}
+
+footer span .social a:nth-child(1):hover {
+    color: #26a4f2;
+    box-shadow: 0 0 15px #1da1f2;
+    /* text-shadow: 0 0 15px #1da1f2; */
+}
+
+footer span .social a:nth-child(2):hover {
+    color: #e23670;
+    box-shadow: 0 0 15px #e1306c;
+    /* text-shadow: 0 0 15px #e1306c; */
+}
+
+footer span .social a:nth-child(3):hover {
+    color: #2a6cbb;
+    box-shadow: 0 0 15px #2867b2;
+    /* text-shadow: 0 0 15px #2867b2; */
+}
+
+footer span .social a:nth-child(4):hover {
+    color: #fff;
+    box-shadow: 0 0 15px #333;
+    /* text-shadow: 0 0 15px #fff; */
+}
+
+@media (max-width: 1300px) {
+    .home .max-width {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .about .about-content .left img {
+        height: 350px;
+        width: 320px;
+    }
+}
+
+@media (max-width: 500px) {
+    .about .about-content .left img {
+        height: 200px;
+        width: 200px;
+    }
+}
+
+@media (max-width: 990px) {
+    .max-width {
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 945px) {
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before {
+        content: "\f00d";
+    }
+    .navbar .menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 70px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active {
+        left: 0;
+    }
+    .navbar .menu li {
+        display: block;
+    }
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .home .home-content .text-2 {
+        font-size: 70px;
+    }
+    .home .home-content .text-3 {
+        font-size: 35px;
+    }
+    .max-width {
+        max-width: 800px;
+    }
+    .about .about-content .column {
+        width: 50%;
+    }
+    .about .about-content .left {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+        ;
+    }
+    .about .about-content .right {
+        flex: 100%;
+    }
+    .interests .interests-content .card {
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+    .skills .skills-content .column,
+    .contact .contact-content .column {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+}
+
+@media (max-width: 690px) {
+    .max-width {
+        padding: 0 23px;
+    }
+    .about .about-content .right {
+        text-align: center;
+    }
+    .home .home-content .text-2 {
+        font-size: 60px;
+    }
+    .home .home-content .text-3 {
+        font-size: 32px;
+    }
+    .interests .interests-content .card,
+    .skills .skills-content .column {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .max-width {
+        padding: 0 23px;
+    }
+    .home .home-content .text-1 {
+        font-size: 25px;
+    }
+    .home .home-content .text-2 {
+        font-size: 50px;
+    }
+    .home .home-content .text-2 span {
+        color: red;
+    }
+    .home .home-content .text-3 {
+        font-size: 25px;
+    }
+    .about .about-content .right .text,
+    .skills .skills-content .left .text {
+        font-size: 19px;
+    }
+    .contact .right form .fields {
+        flex-direction: column;
+    }
+    .contact .right form .name,
+    .contact .right form .email {
+        margin: 0;
+    }
+    .scroll-up-btn {
+        right: 15px;
+        bottom: 15px;
+        height: 38px;
+        width: 35px;
+        font-size: 23px;
+        line-height: 38px;
+    }
+}
