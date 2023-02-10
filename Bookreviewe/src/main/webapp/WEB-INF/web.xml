@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="5.0">
+  <display-name>Book</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>reviewservlet</display-name>
+    <servlet-name>reviewservlet</servlet-name>
+    <servlet-class>com.lpu.webfs.reviewservlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>reviewservlet</servlet-name>
+    <url-pattern>/reviewservlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>reviewremove</display-name>
+    <servlet-name>reviewremove</servlet-name>
+    <servlet-class>com.lpu.webfs.reviewremove</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>reviewremove</servlet-name>
+    <url-pattern>/reviewremove</url-pattern>
+  </servlet-mapping>
+ <servlet>
+    <description></description>
+    <display-name>bookproject</display-name>
+    <servlet-name>bookproject</servlet-name>
+    <jsp-file>/WEB-INF/views/bookproject.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>bookproject</servlet-name>
+    <url-pattern>/bookproject</url-pattern>
+  </servlet-mapping> 
+</web-app>

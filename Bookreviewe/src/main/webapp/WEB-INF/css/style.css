@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+ 
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #eee;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  .book {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+
+    .book img {
+        width: 100px;
+        height: 150px;
+        margin-right: 20px;
+      }
+      
+      .book h3 {
+        margin: 0;
+      }
+      
+      .book p {
+        margin: 0;
+        font-size: 14px;
+        color: #666;
+      }
+      
+      .reviews {
+        list-style: none;
+        padding: 0;
+        margin-right: 30%;
+      }
+      
+      .reviews li {
+        padding: 20px;
+        background-color: #fafafa;
+        margin-bottom: 20px;
+      }
+      
+      .rating {
+        font-weight: bold;
+      }
+      
+      .upvote {
+        background-color: #3399ff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-right: 30%;
+      }
+      
+      form {
+        margin-top: 20px;
+      }
+      
+      textarea,
+      select,
+      button {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+      }
+      
+      textarea {
+        height: 200px;
+      }
+      
+      footer {
+        background-color: #eee;
+        padding: 20px;
+        text-align: center;
+      }
+      .book-content{
+        width: 60%;
+        margin: auto;
+      }
+      .bookauthor{
+        padding: 2%;
+      }
+      .book-rating{
+        width: 30%;
+        margin-right:auto ;
+      }
+      .pagination{
+        justify-content: center;
+      }
